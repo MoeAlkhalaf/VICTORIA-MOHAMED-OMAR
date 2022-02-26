@@ -1,0 +1,56 @@
+package Omar; /// This is the name of the Package Omar chose it 
+import java.util.Scanner;  // Needed for the user input
+
+public class billsystem { /// Identifing the class name and the file name.
+	public static void main(String[] args) { ///this line is important to Identify what are we going to use in our code for example Strings.
+		Scanner keyboard = new Scanner(System.in);  // Create a Scanner to read input
+		String Name, Phone, Address, Email, MedicalProblem;   ///To hold a name. Define Variables
+	    double ROOMRATE, DOCTORFEE, FIXEDFEE, SUM;
+	    ROOMRATE = 589;
+	    DOCTORFEE = 200;
+	    FIXEDFEE = 125.99;
+	    SUM = ROOMRATE + DOCTORFEE + FIXEDFEE;
+	    
+	    
+	    
+	    
+	    System.out.println("Enter First Name :"); /// this to show on the screen a space for user to input name
+        Name = keyboard.nextLine();  // Read user input
+        
+	    System.out.println("Enter current address :"); /// this to show on the screen a space for user to input name
+	    Address = keyboard.nextLine(); // Read user input
+	     
+	    System.out.println("please enter phone Number : "); ///this to show on the screen a space for user to input phone number
+	    Phone= keyboard.nextLine(); // Read user input
+	    
+	    System.out.println("please enter your primary Email address :"); ///this to show on the screen a space for user to input Email Address
+	    Email = keyboard.nextLine(); // read user input
+	    
+	    System.out.println("please Enter the number of the doctor you need,\n"+" A: Dentist, B: chiropractic, C: optometrist: ");
+	    MedicalProblem = keyboard.nextLine();
+	   
+	    
+	    
+	    		
+	    
+	    
+	    
+	    System.out.println("This is the information you enterd and the receipt : ");
+	    System.out.println("First name : " + Name);  // Output user input
+	    System.out.println("Patient address : " + Address);  // Output user input
+	    System.out.println("Patient contact number : " + Phone);
+	    System.out.println("Patient Email Address : " + Email);
+	    System.out.println("please enter the doctor you need: "+ MedicalProblem);
+	    System.out.println("recipt: " + SUM);
+	    
+	    
+	    keyboard.close(); // keyboard no longer in use suggested by the tool
+	    
+           
+	    
+		
+		
+		
+	}
+}
+
