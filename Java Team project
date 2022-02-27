@@ -4,16 +4,13 @@ import java.util.Scanner;  // Needed for the user input
 public class billsystem { /// Identifing the class name and the file name.
 	public static void main(String[] args) { ///this line is important to Identify what are we going to use in our code for example Strings.
 		Scanner keyboard = new Scanner(System.in);  // Create a Scanner to read input
-		String Name, Phone, Address, Email, MedicalProblem;   ///To hold a name. Define Variables
-	    double ROOMRATE, DOCTORFEE, FIXEDFEE, SUM;
-	    ROOMRATE = 589;
-	    DOCTORFEE = 200;
-	    FIXEDFEE = 125.99;
-	    SUM = ROOMRATE + DOCTORFEE + FIXEDFEE;
+		String Name, Phone, Address, Email, SelectDepartment, medicalIssue;   ///To hold a name. Define Variables
+		int daysStayed;
+		double doctorFee, roomCharge, medPrice, totalFee;
 	    
-	    
-	    
-	    
+	    // print a welcome message
+	    System.out.println("*Electronic billing system*\n");
+	     
 	    System.out.println("Enter First Name :"); /// this to show on the screen a space for user to input name
         Name = keyboard.nextLine();  // Read user input
         
@@ -27,7 +24,40 @@ public class billsystem { /// Identifing the class name and the file name.
 	    Email = keyboard.nextLine(); // read user input
 	    
 	    System.out.println("please Enter the number of the doctor you need,\n"+" A: Dentist, B: chiropractic, C: optometrist: ");
-	    MedicalProblem = keyboard.nextLine();
+	    SelectDepartment = keyboard.nextLine();
+	    
+	 // get medical issue as input
+	    System.out.println("Enter medical issue : ");
+	    medicalIssue = keyboard.nextLine();
+	    
+	 // ask user to enter number of days patient stayed in room
+	    System.out.println("Enter number of days stayed : ");
+	    daysStayed = keyboard.nextInt(); //get the number of days
+	    // if patient stayed for less than 5 days, charge them 900 per day for room and 400 per day as doctor's fee
+	    if(daysStayed<=5)
+	    {
+	    roomCharge = 900 * daysStayed;
+	    doctorFee = 400 * daysStayed;
+	    }
+	    // if patient stayed between 5 to 15 days, charge them 800 per day for room and 300 per day as doctor's fee
+	    else if(daysStayed>5 && daysStayed<=15)
+	    {
+	    roomCharge = 800 * daysStayed;
+	    doctorFee = 300 * daysStayed;
+	    }
+	    // if patient stayed for more than 15 days, charge them 600 per day for room and 200 per day as doctor's fee
+	    else
+	    {
+	    roomCharge = 600 * daysStayed;
+	    doctorFee = 200 * daysStayed;
+	    }
+	    // ask user to input price of medicines taken
+	    System.out.println("Enter the price of medicines taken : ");
+	    medPrice = keyboard.nextDouble();
+	    // calculate total fee by adding room charge, doctor's fee and medicine's charge
+	    totalFee = roomCharge + doctorFee + medPrice; 
+	    
+	    
 	   
 	    
 	    
@@ -35,13 +65,14 @@ public class billsystem { /// Identifing the class name and the file name.
 	    
 	    
 	    
-	    System.out.println("This is the information you enterd and the receipt : ");
+	    System.out.println("This is the information you enterd and the receipt :*\n ");
 	    System.out.println("First name : " + Name);  // Output user input
 	    System.out.println("Patient address : " + Address);  // Output user input
 	    System.out.println("Patient contact number : " + Phone);
 	    System.out.println("Patient Email Address : " + Email);
-	    System.out.println("please enter the doctor you need: "+ MedicalProblem);
-	    System.out.println("recipt: " + SUM);
+	    System.out.println("This is the doctor you selected : "+ SelectDepartment);
+	    System.out.println("medical issue Entered: "+ medicalIssue );
+	    System.out.println("recipt: " + totalFee);
 	    
 	    
 	    keyboard.close(); // keyboard no longer in use suggested by the tool
