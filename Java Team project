@@ -7,6 +7,8 @@ public class billsystem { /// Identifing the class name and the file name.
 		String Name, Phone, Address, Email, SelectDepartment, medicalIssue;   ///To hold a name. Define Variables
 		int daysStayed;
 		double doctorFee, roomCharge, medPrice, totalFee;
+		final double cleaningFee;
+		cleaningFee = 35;
 	    
 	    // print a welcome message
 	    System.out.println("*Electronic billing system*\n");
@@ -55,7 +57,7 @@ public class billsystem { /// Identifing the class name and the file name.
 	    System.out.println("Enter the price of medicines taken : ");
 	    medPrice = keyboard.nextDouble();
 	    // calculate total fee by adding room charge, doctor's fee and medicine's charge
-	    totalFee = roomCharge + doctorFee + medPrice; 
+	    totalFee = roomCharge + doctorFee + medPrice + cleaningFee; 
 	    
 	    
 	   
