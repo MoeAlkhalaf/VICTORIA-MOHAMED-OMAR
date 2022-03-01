@@ -36,33 +36,33 @@ public class billsystem { /// Identifing the class name and the file name. ///Om
 	    System.out.println("Enter medical issue : "); ///Omar wrote that line
 	    medicalIssue = keyboard.nextLine(); ///Omar wrote that line
 	    
-	 // ask user to enter number of days patient stayed in room
+	 // This is to ask user to enter number of days patient stayed in room
 	    System.out.println("Enter number of days stayed : "); /// mohamed wrote that line
 	    daysStayed = keyboard.nextInt(); //get the number of days/// mohamed wrote that line
-	    // if patient stayed for less than 5 days, charge them 900 per day for room and 400 per day as doctor's fee /// mohamed wrote that line
-	    if(daysStayed<=5) /// mohamed wrote that line
+	    // Charge patients 900 for room and 400 for doctor if they stayed less than 5 days /// mohamed wrote that line
+	    if(daysStayed<=5) /// Victoria wrote that line
 	    {
-	    roomCharge = 900 * daysStayed; /// Room charge multiply the days stayed /// mohamed wrote that line
-	    doctorFee = 400 * daysStayed; /// doctorFee multiply the days stayed /// mohamed wrote that line
+	    roomCharge = 900 * daysStayed; /// Room charge * the days stayed /// mohamed wrote that line
+	    doctorFee = 400 * daysStayed; /// doctorFee * the days stayed /// Victoria wrote that line
 	    }
-	    // if patient stayed between 5 to 15 days, charge them 800 per day for room and 300 per day as doctor's fee /// mohamed wrote that line
-	    else if(daysStayed>5 && daysStayed<=15) /// mohamed wrote that line
+	    // Charge patients 800 for room and 300 for doctor if they stayed between 5 and 10 days /// mohamed wrote that line
+	    else if(daysStayed>5 && daysStayed<=10) /// mohamed wrote that line
 	    {
 	    roomCharge = 800 * daysStayed; /// mohamed wrote that line
-	    doctorFee = 300 * daysStayed; /// mohamed wrote that line
+	    doctorFee = 300 * daysStayed; /// Victoria wrote that line
 	    }
-	    // if patient stayed for more than 15 days, charge them 600 per day for room and 200 per day as doctor's fee /// mohamed wrote that line
+	    // Charge patients 600 for room and 200 for doctor if they stayed more than 10 days /// mohamed wrote that line
 	    else /// mohamed wrote that line
 	    {
-	    roomCharge = 600 * daysStayed; /// mohamed wrote that line
-	    doctorFee = 200 * daysStayed; /// mohamed wrote that line
+	    roomCharge = 600 * daysStayed; /// Victoria wrote that line
+	    doctorFee = 200 * daysStayed; /// Victoria wrote that line
 	    }
-	    // ask user to input price of medicines taken /// mohamed wrote that line
+	    // This is to ask user to input price of medicines taken /// mohamed wrote that line
 	    System.out.println("Enter the price of medicines taken : "); /// mohamed wrote that line
 	    medPrice = keyboard.nextDouble(); /// mohamed wrote that line
 	    
-	    // calculate total fee by adding room charge, doctor's fee and medicine's charge /// mohamed wrote that line
-	    totalFee = roomCharge + doctorFee + medPrice + cleaningFee;  /// mohamed wrote that line
+	    // calculate the total fee by adding room charge, doctor's fee and medicine /// Victoria wrote that line
+	    totalFee = roomCharge + doctorFee + medPrice + cleaningFee;  /// Victoria wrote that line
 	    
 	    
 	   
@@ -84,8 +84,11 @@ public class billsystem { /// Identifing the class name and the file name. ///Om
 	    
 	    keyboard.close(); // keyboard no longer in use suggested by the tool ///Omar wrote that line
 	    
-	    /// Omar main information came From DrGMC Github diffrent chapters here you can find link to the proffessor's Github
+	    /// Omar main information came From DrGMC Github diffrent chapters here you can find link to the professor's Github
 	    ///https://github.com/DrGMC/JAVA
+	    /// Mohammed main information came from DrGMC Github different chapters here you can find link to the professor's Github, also from outside sources and you can find the links below
+	    /// https://github.com/DrGMC/JAVA
+	    /// https://www.programiz.com/java-programming , https://www.codecademy.com/learn/learn-java
 	     
            
 	    
